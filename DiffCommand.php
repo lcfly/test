@@ -15,7 +15,7 @@ class DiffCommand extends Command
 
     public function __invoke($file, array $options = array())
     {
-        $options = $this->resolve($options);333333
+        $options = $this->resolve($options);
         $builder = $this->git->getProcessBuilder()
             ->add('diff');
 
@@ -36,8 +36,7 @@ class DiffCommand extends Command
     public function setDefaultOptions(OptionsResolverInterface $resolver)
     {
 		$resolver->setDefaults(array(
-            'cached'    => false,
-			'ss' => true
+            'cached'    => false
         ));
     }
 
